@@ -20,3 +20,90 @@
 .animate-progress {
   animation: progress 1.5s ease-in-out infinite;
 }
+
+/* Grid background pattern */
+.bg-grid-white {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+/* Animation utilities */
+.animate-in {
+  animation-duration: 750ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.fade-in {
+  animation-name: fade-in;
+}
+
+.slide-in-from-bottom-4 {
+  animation-name: slide-in-from-bottom;
+  --tw-enter-translate-y: 1rem;
+}
+
+.slide-in-from-bottom-5 {
+  animation-name: slide-in-from-bottom;
+  --tw-enter-translate-y: 1.25rem;
+}
+
+.slide-in-from-bottom-6 {
+  animation-name: slide-in-from-bottom;
+  --tw-enter-translate-y: 1.5rem;
+}
+
+.slide-in-from-bottom-7 {
+  animation-name: slide-in-from-bottom;
+  --tw-enter-translate-y: 1.75rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(var(--tw-enter-translate-y));
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.delay-150 {
+  animation-delay: 150ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.duration-1000 {
+  animation-duration: 1000ms;
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
