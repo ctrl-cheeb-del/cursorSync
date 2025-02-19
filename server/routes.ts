@@ -1,7 +1,7 @@
 import type { Express } from "express";
 import { createServer } from "http";
 import { storage } from "./storage";
-import { insertPromptSchema } from "@shared/schema";
+import { insertPromptSchema } from "./schema";
 
 export async function registerRoutes(app: Express) {
   const httpServer = createServer(app);

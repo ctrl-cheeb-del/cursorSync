@@ -29,7 +29,7 @@ export default function PromptInput({ onSubmit, isLoading }: PromptInputProps) {
       />
       <Button
         type="submit"
-        className="w-full"
+        className="w-full border-2 border-white text-white bg-transparent hover:bg-white/10"
         disabled={!prompt.trim() || isLoading}
       >
         <Send className="w-4 h-4 mr-2" />
